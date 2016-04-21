@@ -3,313 +3,109 @@ extends layouts/presentation
 
 //- Customize the title, meta description, and author using this block.
 block title
-  title Про Тестирование
+  title Recommending the Recommendation
 
 
 //- Add your slides here. See templates/includes/_mixins.jade for information 
 //- on how `+slide` works.
 block slides
   +slide
-    h1 Про Тестирование
+    h1 Recommending the Recommendation
     p
-      small Артем Десятников
-
+      small Artyom Desyatnikov
+    aside.notes
+      | title. going to explore the book... 
+      
   +slide
-    h2 Программа работает хорошо?
+    h2 the best software writing i
+    h5
+      i by Joel Spolsky
+    aside.notes
+      | recommendation of best writing
+      | on software development. i'll be forwarding this recommendation
+      | to you.
+      | questions - feel free to interrupt me. even do feel obliged.
+      | i'll need assistance
+      
+  +slide
+    h2 Points
     ul
-      li.fragment посмотреть на код
-      li.fragment протестировать ее работу
-
-  +slide
-    h2 Протестировать вручную
-    p Самый интуитивный метод
-    p Иногда нельзя иначе
+      li.fragment #[b Introduction] #[i by Joel Spolsky]
+      li.fragment #[b Style is Substance] #[i by Ken Arnold]
+      li.fragment #[b Award for The Silliest User Interface: Windows Search] #[i by Leon Bambrick]
+      li.fragment #[b The Pitfalls of Outsourcing Programmers] #[i by Michael Bean]
     aside.notes
-      иначе тест Тьюринга
+      | covering these topics
+      | let's begin with an Introduction
   
   +slide
-    h2 AI
-    img(src="img/hom3.png")
-    
-  +slide
-    h2 Обработка картинок
-    img(src="img/image-enchancement.jpg")
-  
-  +slide
-    +slide
-      h2 Автоматические тесты
-      ul
-        li быстрые
-        li документируют
-        li человек не нужен
-        img.fragment(src="img/bender.jpg")
-      aside.notes
-        написать другую программу, запускающую эту и проверяющую результаты.
-        можно запускать при коммитах
-    +slide
-      h2 Автоматические тесты
-      h3 Минусы
-      ul
-        li долго писать
-        li плохо имитируют поведение человека
-        img.fragment(src="img/sad-bender.jpg")
-      aside.notes
-        про резкого пользователя
-    
-  +slide(data-background="img/problems-ahead.jpg")
-    aside.notes в идеале - при ошибках ломаются, иначе - проходят
-
-  +slide
-    h2 Ошибки классификации
-    p Первого рода — посчитать плохую программу хорошей
+    h2 Introduction
     ul
-      li.fragment неожиданный сценарий
-      li.fragment неожиданное рабочее окружение (браузер, сервисы)
-    p Второго рода — посчитать хорошую программу плохой
+      li Value of stories
+      li Especially in IT books
+    aside.notes
+      | tells a story himself. refused to recommend.
+      | idea of creating a collection of posts to serve as
+      | an example of how the books should be written
+      | the book is full of amusing masterpieces pinpointing
+      | problems in IT in a truly hilarious way
+
+  +slide
+    h2 Style is Substance
+    h5 by Ken Arnold
     ul
-      li.fragment слишком сложные тесты
-      li.fragment устаревшие тесты
-      li.fragment неожиданное тестовое окружение
+      li Python indentation as an example
+      li Not style but the unity of it
+      li Enforcing in grammar
     aside.notes
-      1 - смена организации в кевебе. половина багов в ие8.
-      сервисы, перетирающие реквизиты. площадки разных команд.
-      2 - таймауты. смена верстки. брэндинг. настройки на соседних сервисах.
-    
-  +slide
-    h2 Конфликт
-    img(src="img/2-level-pyramid.png")
-    aside.notes простота vs реалистичность
-    
-  +slide
-    h2 Простота. Юнит-тесты
-    p Тестирование минимальных кусочков приложения по-отдельности.
-    p.fragment Надо сделать их независимыми
-    aside.notes
-      падают только если ошибка в коде кусочка.
-      удобно искать. обычно - только при разработке кусочка или внесении изменений в кусочек.
-      иногда - при рефакторингах
+      | The Java Programming Language co-author.
+      | programming equivalent of TV-wrestling coding style wars.
+      | whitespaces that mattered in fortran. then everyone remembered
+      | they should not. and that's not true. suggesting enforcing.
+      | too tolerant
       
   +slide
-    h2 Простота. Юнит-тесты
-    p Тестирование минимальных кусочков приложения по-отдельности.
-    p.fragment Надо сделать их независимыми
+    h2 It's Bob's Time
+    h5 by Leon Bambrick
+    img.fragment(src="img/ms-bob.jpg", style="display:inline-block;vertical-align:middle")
+    img.fragment(src="img/ms-bob-google.png", style="display:inline-block;vertical-align:middle;margin-left:20px")
     aside.notes
-      падают только если ошибка в коде кусочка.
-      удобно искать. обычно - только при разработке кусочка или внесении изменений в кусочек.
-      иногда - при рефакторингах
+      | author programming theorist and pugilist. oracle.
+      | very short of an article. featuring some good parody on some bad ms
+      | ui design
+    
+  +slide
+    h2 THE PITFALLS OF OUTSOURCING PROGRAMMERS
+    h5 by Michael Bean
+    ul
+      li Shoe factory inspiration
+      li Ability to innovate
+      li Confuse chocolates with boxes
+    aside.notes
+      | author dev and enterpreneur. very rare combination. worked at MIT.
+      | president of some IT company. essentially good idea comes to wrong heads
+      | at wrong times. core software production.
+      | not being able to innovate.
+      | following the advice of Joel, story. Jean-Marc, chocolates.
   
   +slide
-    h2 Пример TODO-MVC
-
-  +slide
-    +slide
-      h2 Плохой пример номер раз
-      div(data-markdown=true).
-        ```cs
-        class TodoList {
-          private TodoItem[] items;
-          public TodoList() {
-            this.items = Db.GetTodoItems();
-          }
-        }
-        void MainLogic() {
-          var list = new TodoList();
-          Render(list);
-        }
-        ```   
-    +slide
-      h2 Плохой пример номер раз
-      div(data-markdown=true).
-        ```cs
-        class TodoList {
-          private TodoItem[] items;
-          public TodoList() {
-            this.items = Db.GetTodoItems();
-          }
-        }
-        void Test() {
-          var list = new TodoList();
-          ???
-        }
-        ```   
-      p.fragment Dependency Injection
-
-    +slide
-      h2 Исправленный пример номер раз
-      div(data-markdown=true).
-        ```cs
-        class TodoList {
-          private TodoItem[] items;
-          public TodoList(TodoItem[] items) {
-            this.items = items;
-          }
-        }
-        void MainLogic() {
-          var db = new Db("login", "pass", catalog: "items");
-          var items = db.GetTodoItems();
-          var list = new TodoList(items);
-          Render(list);
-        }
-        void Test() {
-          var list = new TodoList(new TodoItem[] {...});
-          var rendered = Render(list);
-          Assert.That(rendered.HasSmthToDo, Is.False);
-        }
-        ```   
-  +slide
-    h2 NUnit
-    div(data-markdown=true).
-      ```cs
-      [TestFixture]
-      public class TodoListTest
-      {
-        [Test]
-        public void HasNothingToDoWhenEmpty()
-        {
-          var list = new TodoList(new TodoItem[] {});
-          Assert.That(rendered.HasSmthToDo, Is.False);
-        }
-      }
-      ```
-      
-  +slide
-    h2 Mocha + Chai
-    div(data-markdown=true).
-      ```js
-      describe("todo list", () => {
-        it("has nothing to do when empty", () => {
-          let list = new TodoList([]);
-          expect(list.hasSmthToDo).to.be.false;
-        });
-      });
-      ```
-  
-  +slide
-    h2 Семантичные Assert-методы
-    h3 NUnit
-    div(data-markdown=true).
-      ```cs
-      Assert.AreNotEqual(5, 2 + 2);
-      // vs
-      Assert.That(2 + 2, Is.Not.EqualTo(5));
-      Assert.That(SomeMethod, Throws.TypeOf<ArgumentException>()
-          .With.Property("Parameter").EqualTo("myParam"));
-      ```
-    
-  +slide
-    +slide
-      h2 Плохой номер два
-      div(data-markdown=true).
-        ```cs
-        class Db {
-          ...
-          public TodoItem[] GetTodoItems() {
-            return new DbConnection(login, password, catalog)
-              .Query("select * from todos")
-              .Select(row => new TodoItem
-              {
-                Text = row["text"],
-                Done = row["done"] == "1"
-              });
-          }
-          public void SaveTodoItems(TodoItem[] items) {
-            new DbConnection(login, password, catalog)
-              .Query("insert or update items " + ...));
-          }
-        }
-        ```
-      p.fragment Dependency Inversion
-  
-    +slide
-      h2 Исправленный пример номер два
-      div(data-markdown=true).
-        ```cs
-        class Db {
-          private IDbConnection connection;
-          ...
-          public TodoItem[] GetTodoItems() {
-            return connection
-              .Query("select * from todos")
-              .Select(row => new TodoItem
-              {
-                Text = row["text"],
-                Done = row["done"] == "1"
-              });
-          }
-          public void SaveTodoItems(TodoItem[] items) {
-            connection.Query("insert or update items " + ...);
-          }
-        }
-        ```
-      p.fragment Dependency Inversion
-        
-    +slide
-      h2 Исправленный пример номер два. Тест
-      div(data-markdown=true).
-        ```cs
-        class TestConnection : IDbConnection {
-          public RowSet Query(string query) { return new RowSet(); }
-          public void Dispose() {}
-        }
-        [Test]
-        void AllDoneWhenListIsEmpty() {
-          var header = new Db(new EmptyItemsProvider());
-          Assert.That(header.AllDone);
-        }
-        ```
-    +slide
-      h2 Исправленный пример номер два. FakeItEasy
-      div(data-markdown=true).
-        ```cs
-        [Test]
-        void DbYieldsEmptyItemListWhenRowSetIsEmpty() {
-          var fakeConnection = A.Fake<IDbConnection>();
-          A.CallTo(() => fakeConnection.Query("select * from todos"))
-            .Returns(new RowSet());
-          var db = new Db(fakeItemProvider);
-          Assert.That(db.GetTodoItems(), Is.Empty);
-        }
-        ```  
-    +slide
-      h2 Интеграционный тест
-      div(data-markdown=true).
-        ```cs
-        new MainLogic(new Db(fakeConnection));
-        ```
-      p Затычки на каком-то уровне. Поверх - настоящая логика
-      
-    +slide
-      h2 Single Responsibility
-      div(data-markdown=true).
-        ```cs
-        class DbUtils {
-          public TodoItem RowToTodoItem(Row row) { ... }
-          public string ToUpdateQuery(TodoItem[] items) { ... }
-        }
-        [Test]
-        void RowToTodoItemConvertsSimpleRow() {
-          var row = new Row();
-          row.Add("done", "0");
-          row.Add("text", "hello");
-          var todoItem = DbUtils.RowToTodoItem(row);
-          Assert.That(todoItem.Text, Is.EqualTo("hello"));
-          Assert.That(todoItem.Done, Is.False);
-        }
-        ```
-      p.fragment Чистые функции. Декомпозиция.
-    
-  +slide
-    h2 End-To-End тесты
-    p Тестирование в браузере
-    img(src="img/selenium-workflow.jpg")
-    aside.notes хрупкие. и ошибки расплывчатые
-      
-  +slide
-    img(src="img/3-level-pyramid.png")
+    h2 Points Once Again
+    ul
+      li.fragment #[b Introduction] #[i by Joel Spolsky]
+      li.fragment #[b Style is Substance] #[i by Ken Arnold]
+      li.fragment #[b Award for The Silliest User Interface: Windows Search] #[i by Leon Bambrick]
+      li.fragment #[b The Pitfalls of Outsourcing Programmers] #[i by Michael Bean]
     aside.notes
-      гугл. разница в понимании. сначала - e2e и unit. потом - integration.
-      искусство
-
-
+      | book permeated with joel's famous playfulness and irony and scepticism.
+      | touching vital IT problems you've rarely thought of as problems
+      
+  +slide
+    h2 the best software writing i
+    h5
+      i by Joel Spolsky
+    aside.notes
+      | only part of book. continuing my journey through it.
+      | and so i recommend to you as well.
+      
   +slide
     h1 THE END

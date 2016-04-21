@@ -5,7 +5,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Про Тестирование</title>
+    <title>Recommending the Recommendation</title>
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="lib/css/zenburn.css">
     <link rel="stylesheet" href="css/theme/black.css" id="theme">
@@ -23,326 +23,108 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <h1>Про Тестирование</h1>
-          <p><small>Артем Десятников</small></p>
+          <h1>Recommending the Recommendation</h1>
+          <p><small>Artyom Desyatnikov</small></p>
+          <aside class="notes">title. going to explore the book... </aside>
         </section>
         <section>
-          <h2>Программа работает хорошо?</h2>
-          <ul>
-            <li class="fragment">посмотреть на код</li>
-            <li class="fragment">протестировать ее работу</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Протестировать вручную</h2>
-          <p>Самый интуитивный метод</p>
-          <p>Иногда нельзя иначе</p>
-          <aside class="notes">иначе тест Тьюринга</aside>
-        </section>
-        <section>
-          <h2>AI</h2><img src="img/hom3.png">
-        </section>
-        <section>
-          <h2>Обработка картинок</h2><img src="img/image-enchancement.jpg">
-        </section>
-        <section>
-          <section>
-            <h2>Автоматические тесты</h2>
-            <ul>
-              <li>быстрые</li>
-              <li>документируют</li>
-              <li>человек не нужен</li><img src="img/bender.jpg" class="fragment">
-            </ul>
-            <aside class="notes">
-              написать другую программу, запускающую эту и проверяющую результаты.
-              можно запускать при коммитах
-            </aside>
-          </section>
-          <section>
-            <h2>Автоматические тесты</h2>
-            <h3>Минусы</h3>
-            <ul>
-              <li>долго писать</li>
-              <li>плохо имитируют поведение человека</li><img src="img/sad-bender.jpg" class="fragment">
-            </ul>
-            <aside class="notes">про резкого пользователя</aside>
-          </section>
-        </section>
-        <section data-background="img/problems-ahead.jpg">
-          <aside class="notes">в идеале - при ошибках ломаются, иначе - проходят</aside>
-        </section>
-        <section>
-          <h2>Ошибки классификации</h2>
-          <p>Первого рода — посчитать плохую программу хорошей</p>
-          <ul>
-            <li class="fragment">неожиданный сценарий</li>
-            <li class="fragment">неожиданное рабочее окружение (браузер, сервисы)</li>
-          </ul>
-          <p>Второго рода — посчитать хорошую программу плохой</p>
-          <ul>
-            <li class="fragment">слишком сложные тесты</li>
-            <li class="fragment">устаревшие тесты</li>
-            <li class="fragment">неожиданное тестовое окружение</li>
-          </ul>
+          <h2>the best software writing i</h2>
+          <h5><i>by Joel Spolsky</i></h5>
           <aside class="notes">
-            <1>- смена организации в кевебе. половина багов в ие8.</1>сервисы, перетирающие реквизиты. площадки разных команд.
-            <2>- таймауты. смена верстки. брэндинг. настройки на соседних сервисах.</2>
+            recommendation of best writing
+            on software development. i'll be forwarding this recommendation
+            to you.
+            questions - feel free to interrupt me. even do feel obliged.
+            i'll need assistance
           </aside>
         </section>
         <section>
-          <h2>Конфликт</h2><img src="img/2-level-pyramid.png">
-          <aside class="notes">простота vs реалистичность</aside>
-        </section>
-        <section>
-          <h2>Простота. Юнит-тесты</h2>
-          <p>Тестирование минимальных кусочков приложения по-отдельности.</p>
-          <p class="fragment">Надо сделать их независимыми</p>
+          <h2>Points</h2>
+          <ul>
+            <li class="fragment"><b>Introduction</b> <i>by Joel Spolsky</i></li>
+            <li class="fragment"><b>Style is Substance</b> <i>by Ken Arnold</i></li>
+            <li class="fragment"><b>Award for The Silliest User Interface: Windows Search</b> <i>by Leon Bambrick</i></li>
+            <li class="fragment"><b>The Pitfalls of Outsourcing Programmers</b> <i>by Michael Bean</i></li>
+          </ul>
           <aside class="notes">
-            падают только если ошибка в коде кусочка.
-            удобно искать. обычно - только при разработке кусочка или внесении изменений в кусочек.
-            иногда - при рефакторингах
+            covering these topics
+            let's begin with an Introduction
           </aside>
         </section>
         <section>
-          <h2>Простота. Юнит-тесты</h2>
-          <p>Тестирование минимальных кусочков приложения по-отдельности.</p>
-          <p class="fragment">Надо сделать их независимыми</p>
+          <h2>Introduction</h2>
+          <ul>
+            <li>Value of stories</li>
+            <li>Especially in IT books</li>
+          </ul>
           <aside class="notes">
-            падают только если ошибка в коде кусочка.
-            удобно искать. обычно - только при разработке кусочка или внесении изменений в кусочек.
-            иногда - при рефакторингах
+            tells a story himself. refused to recommend.
+            idea of creating a collection of posts to serve as
+            an example of how the books should be written
+            the book is full of amusing masterpieces pinpointing
+            problems in IT in a truly hilarious way
           </aside>
         </section>
         <section>
-          <h2>Пример TODO-MVC</h2>
-        </section>
-        <section>
-          <section>
-            <h2>Плохой пример номер раз</h2>
-            <div data-markdown>
-              ```cs
-              class TodoList {
-                private TodoItem[] items;
-                public TodoList() {
-                  this.items = Db.GetTodoItems();
-                }
-              }
-              void MainLogic() {
-                var list = new TodoList();
-                Render(list);
-              }
-              ```   
-            </div>
-          </section>
-          <section>
-            <h2>Плохой пример номер раз</h2>
-            <div data-markdown>
-              ```cs
-              class TodoList {
-                private TodoItem[] items;
-                public TodoList() {
-                  this.items = Db.GetTodoItems();
-                }
-              }
-              void Test() {
-                var list = new TodoList();
-                ???
-              }
-              ```   
-            </div>
-            <p class="fragment">Dependency Injection</p>
-          </section>
-          <section>
-            <h2>Исправленный пример номер раз</h2>
-            <div data-markdown>
-              ```cs
-              class TodoList {
-                private TodoItem[] items;
-                public TodoList(TodoItem[] items) {
-                  this.items = items;
-                }
-              }
-              void MainLogic() {
-                var db = new Db("login", "pass", catalog: "items");
-                var items = db.GetTodoItems();
-                var list = new TodoList(items);
-                Render(list);
-              }
-              void Test() {
-                var list = new TodoList(new TodoItem[] {...});
-                var rendered = Render(list);
-                Assert.That(rendered.HasSmthToDo, Is.False);
-              }
-              ```   
-            </div>
-          </section>
-        </section>
-        <section>
-          <h2>NUnit</h2>
-          <div data-markdown>
-            ```cs
-            [TestFixture]
-            public class TodoListTest
-            {
-              [Test]
-              public void HasNothingToDoWhenEmpty()
-              {
-                var list = new TodoList(new TodoItem[] {});
-                Assert.That(rendered.HasSmthToDo, Is.False);
-              }
-            }
-            ```
-            
-          </div>
-        </section>
-        <section>
-          <h2>Mocha + Chai</h2>
-          <div data-markdown>
-            ```js
-            describe("todo list", () => {
-              it("has nothing to do when empty", () => {
-                let list = new TodoList([]);
-                expect(list.hasSmthToDo).to.be.false;
-              });
-            });
-            ```
-            
-          </div>
-        </section>
-        <section>
-          <h2>Семантичные Assert-методы</h2>
-          <h3>NUnit</h3>
-          <div data-markdown>
-            ```cs
-            Assert.AreNotEqual(5, 2 + 2);
-            // vs
-            Assert.That(2 + 2, Is.Not.EqualTo(5));
-            Assert.That(SomeMethod, Throws.TypeOf<ArgumentException>()
-                .With.Property("Parameter").EqualTo("myParam"));
-            ```
-            
-          </div>
-        </section>
-        <section>
-          <section>
-            <h2>Плохой номер два</h2>
-            <div data-markdown>
-              ```cs
-              class Db {
-                ...
-                public TodoItem[] GetTodoItems() {
-                  return new DbConnection(login, password, catalog)
-                    .Query("select * from todos")
-                    .Select(row => new TodoItem
-                    {
-                      Text = row["text"],
-                      Done = row["done"] == "1"
-                    });
-                }
-                public void SaveTodoItems(TodoItem[] items) {
-                  new DbConnection(login, password, catalog)
-                    .Query("insert or update items " + ...));
-                }
-              }
-              ```
-            </div>
-            <p class="fragment">Dependency Inversion</p>
-          </section>
-          <section>
-            <h2>Исправленный пример номер два</h2>
-            <div data-markdown>
-              ```cs
-              class Db {
-                private IDbConnection connection;
-                ...
-                public TodoItem[] GetTodoItems() {
-                  return connection
-                    .Query("select * from todos")
-                    .Select(row => new TodoItem
-                    {
-                      Text = row["text"],
-                      Done = row["done"] == "1"
-                    });
-                }
-                public void SaveTodoItems(TodoItem[] items) {
-                  connection.Query("insert or update items " + ...);
-                }
-              }
-              ```
-            </div>
-            <p class="fragment">Dependency Inversion</p>
-          </section>
-          <section>
-            <h2>Исправленный пример номер два. Тест</h2>
-            <div data-markdown>
-              ```cs
-              class TestConnection : IDbConnection {
-                public RowSet Query(string query) { return new RowSet(); }
-                public void Dispose() {}
-              }
-              [Test]
-              void AllDoneWhenListIsEmpty() {
-                var header = new Db(new EmptyItemsProvider());
-                Assert.That(header.AllDone);
-              }
-              ```
-            </div>
-          </section>
-          <section>
-            <h2>Исправленный пример номер два. FakeItEasy</h2>
-            <div data-markdown>
-              ```cs
-              [Test]
-              void DbYieldsEmptyItemListWhenRowSetIsEmpty() {
-                var fakeConnection = A.Fake<IDbConnection>();
-                A.CallTo(() => fakeConnection.Query("select * from todos"))
-                  .Returns(new RowSet());
-                var db = new Db(fakeItemProvider);
-                Assert.That(db.GetTodoItems(), Is.Empty);
-              }
-              ```  
-            </div>
-          </section>
-          <section>
-            <h2>Интеграционный тест</h2>
-            <div data-markdown>
-              ```cs
-              new MainLogic(new Db(fakeConnection));
-              ```
-            </div>
-            <p>Затычки на каком-то уровне. Поверх - настоящая логика</p>
-          </section>
-          <section>
-            <h2>Single Responsibility</h2>
-            <div data-markdown>
-              ```cs
-              class DbUtils {
-                public TodoItem RowToTodoItem(Row row) { ... }
-                public string ToUpdateQuery(TodoItem[] items) { ... }
-              }
-              [Test]
-              void RowToTodoItemConvertsSimpleRow() {
-                var row = new Row();
-                row.Add("done", "0");
-                row.Add("text", "hello");
-                var todoItem = DbUtils.RowToTodoItem(row);
-                Assert.That(todoItem.Text, Is.EqualTo("hello"));
-                Assert.That(todoItem.Done, Is.False);
-              }
-              ```
-            </div>
-            <p class="fragment">Чистые функции. Декомпозиция.</p>
-          </section>
-        </section>
-        <section>
-          <h2>End-To-End тесты</h2>
-          <p>Тестирование в браузере</p><img src="img/selenium-workflow.jpg">
-          <aside class="notes">хрупкие. и ошибки расплывчатые</aside>
-        </section>
-        <section><img src="img/3-level-pyramid.png">
+          <h2>Style is Substance</h2>
+          <h5>by Ken Arnold</h5>
+          <ul>
+            <li>Python indentation as an example</li>
+            <li>Not style but the unity of it</li>
+            <li>Enforcing in grammar</li>
+          </ul>
           <aside class="notes">
-            гугл. разница в понимании. сначала - e2e и unit. потом - integration.
-            искусство
+            The Java Programming Language co-author.
+            programming equivalent of TV-wrestling coding style wars.
+            whitespaces that mattered in fortran. then everyone remembered
+            they should not. and that's not true. suggesting enforcing.
+            too tolerant
+          </aside>
+        </section>
+        <section>
+          <h2>It's Bob's Time</h2>
+          <h5>by Leon Bambrick</h5><img src="img/ms-bob.jpg" style="display:inline-block;vertical-align:middle" class="fragment"><img src="img/ms-bob-google.png" style="display:inline-block;vertical-align:middle;margin-left:20px" class="fragment">
+          <aside class="notes">
+            author programming theorist and pugilist. oracle.
+            very short of an article. featuring some good parody on some bad ms
+            ui design
+          </aside>
+        </section>
+        <section>
+          <h2>THE PITFALLS OF OUTSOURCING PROGRAMMERS</h2>
+          <h5>by Michael Bean</h5>
+          <ul>
+            <li>Shoe factory inspiration</li>
+            <li>Ability to innovate</li>
+            <li>Confuse chocolates with boxes</li>
+          </ul>
+          <aside class="notes">
+            author dev and enterpreneur. very rare combination. worked at MIT.
+            president of some IT company. essentially good idea comes to wrong heads
+            at wrong times. core software production.
+            not being able to innovate.
+            following the advice of Joel, story. Jean-Marc, chocolates.
+          </aside>
+        </section>
+        <section>
+          <h2>Points Once Again</h2>
+          <ul>
+            <li class="fragment"><b>Introduction</b> <i>by Joel Spolsky</i></li>
+            <li class="fragment"><b>Style is Substance</b> <i>by Ken Arnold</i></li>
+            <li class="fragment"><b>Award for The Silliest User Interface: Windows Search</b> <i>by Leon Bambrick</i></li>
+            <li class="fragment"><b>The Pitfalls of Outsourcing Programmers</b> <i>by Michael Bean</i></li>
+          </ul>
+          <aside class="notes">
+            book permeated with joel's famous playfulness and irony and scepticism.
+            touching vital IT problems you've rarely thought of as problems
+          </aside>
+        </section>
+        <section>
+          <h2>the best software writing i</h2>
+          <h5><i>by Joel Spolsky</i></h5>
+          <aside class="notes">
+            only part of book. continuing my journey through it.
+            and so i recommend to you as well.
           </aside>
         </section>
         <section>
